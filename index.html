@@ -539,7 +539,8 @@
         /* Photo gallery */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             gap: 15px;
             margin-top: 30px;
         }
@@ -562,6 +563,14 @@
             height: 150px;
             object-fit: cover;
             display: block;
+        }
+        
+        /* Media query for mobile devices */
+        @media screen and (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+            }
         }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -765,32 +774,32 @@
                     </div>
                     
                     <div class="quiz-question hidden" id="question-3">
-                        <h3>3. What was my favorite gift from you?</h3>
+                        <h3>3. What was the first thing which I gave you?</h3>
                         <div class="quiz-options">
-                            <div class="quiz-option">The necklace</div>
-                            <div class="quiz-option">The surprise letter</div>
-                            <div class="quiz-option" data-correct="true">The handmade photo album</div>
-                            <div class="quiz-option">The custom playlist</div>
+                            <div class="quiz-option">Chain</div>
+                            <div class="quiz-option">A Letter</div>
+                            <div class="quiz-option" data-correct="true">Chocolate</div>
+                            <div class="quiz-option">A Ring</div>
                         </div>
                     </div>
                     
                     <div class="quiz-question hidden" id="question-4">
-                        <h3>4. Where do we plan to meet next?</h3>
+                        <h3>4. When was our first kiss?</h3>
                         <div class="quiz-options">
-                            <div class="quiz-option">Paris</div>
-                            <div class="quiz-option" data-correct="true">New York</div>
-                            <div class="quiz-option">Tokyo</div>
-                            <div class="quiz-option">Rome</div>
+                            <div class="quiz-option">26 July</div>
+                            <div class="quiz-option" data-correct="true">27 July</div>
+                            <div class="quiz-option">27 May</div>
+                            <div class="quiz-option">12 August</div>
                         </div>
                     </div>
                     
                     <div class="quiz-question hidden" id="question-5">
-                        <h3>5. What do I always say before we end our calls?</h3>
+                        <h3>5. What was the first nick name which I gave you?</h3>
                         <div class="quiz-options">
-                            <div class="quiz-option">See you soon</div>
-                            <div class="quiz-option">Sweet dreams</div>
-                            <div class="quiz-option">Don't forget about me</div>
-                            <div class="quiz-option" data-correct="true">I love you to the moon and back</div>
+                            <div class="quiz-option">Mumu 🥰</div>
+                            <div class="quiz-option">Wifey 😍</div>
+                            <div class="quiz-option">Pissasu 😅</div>
+                            <div class="quiz-option" data-correct="true">Baby Doll 🪆</div>
                         </div>
                     </div>
                     
