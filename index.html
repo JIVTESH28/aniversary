@@ -572,6 +572,192 @@
                 grid-template-rows: repeat(4, 1fr);
             }
         }
+        .song {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .song:hover {
+            background: #fff9f9;
+        }
+        
+        .song.playing {
+            background: #ffeff2;
+            border-left: 4px solid #ff758c;
+        }
+        
+        .song-number {
+            font-weight: bold;
+            color: #ff758c;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .song-details {
+            flex-grow: 1;
+        }
+        
+        .song-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .song-artist {
+            font-size: 0.9rem;
+            color: #888;
+        }
+        
+        .song-note {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #ff758c;
+            margin-top: 5px;
+        }
+        
+        .song-controls {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+        
+        .play-btn {
+            background: #ff758c;
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+        
+        .play-btn:hover {
+            background: #ff5c8a;
+            transform: scale(1.1);
+        }
+        
+        .play-btn i {
+            font-size: 14px;
+        }
+        
+        .audio-player-container {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .now-playing {
+            font-size: 0.9rem;
+            color: #888;
+            margin-right: 15px;
+        }
+        
+        .player-song-title {
+            font-weight: bold;
+            color: #ff758c;
+            margin-left: 5px;
+        }
+        
+        .player-controls {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            gap: 10px;
+        }
+        
+        .player-btn {
+            background: #ff758c;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+        
+        .player-btn:hover {
+            background: #ff5c8a;
+            transform: scale(1.05);
+        }
+        
+        .player-btn.small {
+            width: 30px;
+            height: 30px;
+        }
+        
+        .player-btn i {
+            font-size: 16px;
+        }
+        
+        .progress-container {
+            flex-grow: 1;
+            height: 5px;
+            background: #e0e0e0;
+            border-radius: 5px;
+            margin: 0 15px;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: #ff758c;
+            border-radius: 5px;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+        
+        .progress-handle {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #ff758c;
+            border-radius: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            left: 0%;
+            display: none;
+        }
+        
+        .progress-container:hover .progress-handle {
+            display: block;
+        }
+        
+        .time-display {
+            font-size: 0.9rem;
+            color: #888;
+            min-width: 80px;
+            text-align: center;
+        }
+        
+        .audio-player-container.collapsed {
+            max-height: 0;
+            padding: 0;
+            overflow: hidden;
+            margin-top: 0;
+            transition: all 0.3s ease;
+        }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -645,26 +831,26 @@
                 </div>
                 <div class="timeline-item timeline-right">
                     <div class="timeline-content">
-                        <h3 class="timeline-date">March 7, 2023</h3>
+                        <h3 class="timeline-date">March 7, 2024</h3>
                         <p>Met after a long time</p>
                     </div>
                 </div>
                 <div class="timeline-item timeline-left">
                     <div class="timeline-content">
-                        <h3 class="timeline-date">November 2023</h3>
-                        <p>Our second in-person meeting</p>
+                        <h3 class="timeline-date">October 5, 2024</h3>
+                        <p>Our first lunch together</p>
                     </div>
                 </div>
                 <div class="timeline-item timeline-right">
                     <div class="timeline-content">
-                        <h3 class="timeline-date">May 3, 2024</h3>
-                        <p>Three years of love across the distance</p>
+                        <h3 class="timeline-date">December 26, 2024</h3>
+                        <p>Our first dance</p>
                     </div>
                 </div>
                 <div class="timeline-item timeline-left">
                     <div class="timeline-content">
                         <h3 class="timeline-date">Today - May 3, 2025</h3>
-                        <p>Four beautiful years and countless more to come</p>
+                        <p>Four beautiful years and countless more to come♾️</p>
                     </div>
                 </div>
             </div>
@@ -703,46 +889,99 @@
         
         <div class="section">
             <h2><i class="fas fa-music"></i> Our Playlist</h2>
-            <p>The soundtrack of our love story - each song with a special meaning to us.</p>
+            <p>The soundtrack of our love story - each song with a special meaning to us. Click on any song to play it!</p>
+            
+            <!-- Audio element for playing music -->
+            <audio id="audio-player" preload="none"></audio>
+            
+            <!-- Audio player UI -->
+            <div class="audio-player-container hidden" id="audio-player-ui">
+                <div class="now-playing">Now playing: <span class="player-song-title" id="player-song-title">Nothing yet</span></div>
+                
+                <button class="player-btn small" id="prev-btn">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                
+                <button class="player-btn" id="main-play-btn">
+                    <i class="fas fa-play" id="main-play-icon"></i>
+                </button>
+                
+                <button class="player-btn small" id="next-btn">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+                
+                <div class="progress-container" id="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                    <div class="progress-handle" id="progress-handle"></div>
+                </div>
+                
+                <div class="time-display" id="time-display">00:00 / 00:00</div>
+            </div>
+            
             <div class="playlist">
-                <div class="song">
+                <div class="song" data-song="data/Ed Sheeran - Shape of You (Lyrics).mp3">
                     <div class="song-number">1</div>
                     <div class="song-details">
                         <div class="song-title">Perfect</div>
                         <div class="song-artist">Ed Sheeran</div>
                         <div class="song-note">The song that reminds me of you every time I hear it</div>
                     </div>
+                    <div class="song-controls">
+                        <button class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="song">
+                <div class="song" data-song="data/thousand_miles.mp3">
                     <div class="song-number">2</div>
                     <div class="song-details">
                         <div class="song-title">A Thousand Miles</div>
                         <div class="song-artist">Vanessa Carlton</div>
                         <div class="song-note">Because I would walk a thousand miles to see you</div>
                     </div>
+                    <div class="song-controls">
+                        <button class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="song">
+                <div class="song" data-song="data/thinking_out_loud.mp3">
                     <div class="song-number">3</div>
                     <div class="song-details">
                         <div class="song-title">Thinking Out Loud</div>
                         <div class="song-artist">Ed Sheeran</div>
                         <div class="song-note">Our first virtual dance together</div>
                     </div>
+                    <div class="song-controls">
+                        <button class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="song">
+                <div class="song" data-song="data/cant_help_falling_in_love.mp3">
                     <div class="song-number">4</div>
                     <div class="song-details">
                         <div class="song-title">Can't Help Falling In Love</div>
                         <div class="song-artist">Elvis Presley</div>
                         <div class="song-note">The song that played during our first meeting</div>
                     </div>
+                    <div class="song-controls">
+                        <button class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="song">
+                <div class="song" data-song="data/photograph.mp3">
                     <div class="song-number">5</div>
                     <div class="song-details">
                         <div class="song-title">Photograph</div>
                         <div class="song-artist">Ed Sheeran</div>
                         <div class="song-note">We keep our love in photographs</div>
+                    </div>
+                    <div class="song-controls">
+                        <button class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1111,8 +1350,8 @@ Our love will always be this strong.
         
         // Countdown timer
         function updateCountdown() {
-            // Set your next meeting date here (format: year, month (0-11), day, hour, minute)
-            const meetingDate = new Date(2025, 7, 15, 14, 30); // August 15, 2025 at 14:30
+
+            const meetingDate = new Date(2025, 6, 1, 14, 30); // August 15, 2025 at 14:30
             const now = new Date();
             
             const diff = meetingDate - now;
@@ -1161,7 +1400,7 @@ Our love will always be this strong.
             },
             4: {
                 title: "When You Need a Smile",
-                message: "Remember that time we were on a video call and I tried to show you my cooking skills but ended up dropping everything on the floor? Or when we tried to synchronize our dance moves but ended up laughing so hard we couldn't breathe? Your laugh is my favorite sound in the world, and I hope thinking of these moments brings that beautiful smile to your face."
+                message: "Remember the time when we walked in rain. We went to school to submit our test paper came back walking in rain, those happy moments. Our early morning bike rides , you used to hug me from behind . Remember those moments when ever you feel low and sad , I'm always there for you da chellame."
             },
             5: {
                 title: "When You're Proud of Something",
@@ -1182,12 +1421,6 @@ Our love will always be this strong.
             });
         }
         
-        // Gallery items
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            item.addEventListener('click', function() {
-                alert("Replace these placeholders with your actual photos for a personalized gallery!");
-            });
-        });
         
         // Close modals when clicking outside
         window.addEventListener('click', function(event) {
@@ -1197,6 +1430,197 @@ Our love will always be this strong.
             if (event.target === document.getElementById('message-modal')) {
                 document.getElementById('message-modal').style.display = 'none';
             }
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const audioPlayer = document.getElementById('audio-player');
+            const audioPlayerUI = document.getElementById('audio-player-ui');
+            const playerSongTitle = document.getElementById('player-song-title');
+            const mainPlayBtn = document.getElementById('main-play-btn');
+            const mainPlayIcon = document.getElementById('main-play-icon');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const progressBar = document.getElementById('progress-bar');
+            const progressHandle = document.getElementById('progress-handle');
+            const progressContainer = document.getElementById('progress-container');
+            const timeDisplay = document.getElementById('time-display');
+            const songs = document.querySelectorAll('.song');
+            const playButtons = document.querySelectorAll('.play-btn');
+            
+            let currentSongIndex = 0;
+            let isPlaying = false;
+            
+            // Initialize song playback
+            function playSong(index) {
+                const song = songs[index];
+                const songFile = song.getAttribute('data-song');
+                const songTitle = song.querySelector('.song-title').textContent;
+                
+                // Remove 'playing' class from all songs
+                songs.forEach(s => s.classList.remove('playing'));
+                
+                // Add 'playing' class to current song
+                song.classList.add('playing');
+                
+                // Update play button icons for all songs
+                playButtons.forEach((btn, i) => {
+                    btn.innerHTML = i === index && isPlaying ? '<i class="fas fa-pause"></i>' : '<i class="fas fa-play"></i>';
+                });
+                
+                // Set audio source
+                audioPlayer.src = songFile;
+                
+                // Update player UI
+                playerSongTitle.textContent = songTitle;
+                audioPlayerUI.classList.remove('hidden');
+                
+                // Play audio if needed
+                if (isPlaying) {
+                    audioPlayer.play().catch(e => {
+                        console.error('Error playing audio:', e);
+                        // Handle autoplay restrictions
+                        isPlaying = false;
+                        updatePlayButtonState();
+                    });
+                }
+                
+                currentSongIndex = index;
+            }
+            
+            // Toggle play/pause
+            function togglePlay() {
+                if (audioPlayer.src) {
+                    if (isPlaying) {
+                        audioPlayer.pause();
+                    } else {
+                        audioPlayer.play().catch(e => {
+                            console.error('Error playing audio:', e);
+                        });
+                    }
+                    isPlaying = !isPlaying;
+                    updatePlayButtonState();
+                } else if (songs.length > 0) {
+                    // If no song is loaded, play the first one
+                    isPlaying = true;
+                    playSong(0);
+                    updatePlayButtonState();
+                }
+            }
+            
+            // Update play button state
+            function updatePlayButtonState() {
+                mainPlayIcon.className = isPlaying ? 'fas fa-pause' : 'fas fa-play';
+                
+                // Update individual song play buttons
+                const currentSongBtn = songs[currentSongIndex]?.querySelector('.play-btn');
+                if (currentSongBtn) {
+                    currentSongBtn.innerHTML = isPlaying ? '<i class="fas fa-pause"></i>' : '<i class="fas fa-play"></i>';
+                }
+            }
+            
+            // Format time in minutes:seconds
+            function formatTime(seconds) {
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            }
+            
+            // Update progress bar
+            function updateProgress() {
+                if (audioPlayer.duration) {
+                    const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                    progressBar.style.width = `${percent}%`;
+                    progressHandle.style.left = `${percent}%`;
+                    
+                    // Update time display
+                    timeDisplay.textContent = `${formatTime(audioPlayer.currentTime)} / ${formatTime(audioPlayer.duration)}`;
+                } else {
+                    progressBar.style.width = '0%';
+                    progressHandle.style.left = '0%';
+                    timeDisplay.textContent = '00:00 / 00:00';
+                }
+            }
+            
+            // Set progress when clicking on progress bar
+            function setProgress(e) {
+                const width = progressContainer.clientWidth;
+                const clickX = e.offsetX;
+                const duration = audioPlayer.duration;
+                
+                if (duration) {
+                    audioPlayer.currentTime = (clickX / width) * duration;
+                }
+            }
+            
+            // Play next song
+            function playNext() {
+                let nextIndex = currentSongIndex + 1;
+                if (nextIndex >= songs.length) {
+                    nextIndex = 0; // Loop back to first song
+                }
+                playSong(nextIndex);
+            }
+            
+            // Play previous song
+            function playPrev() {
+                let prevIndex = currentSongIndex - 1;
+                if (prevIndex < 0) {
+                    prevIndex = songs.length - 1; // Loop to last song
+                }
+                playSong(prevIndex);
+            }
+            
+            // Event listeners
+            mainPlayBtn.addEventListener('click', togglePlay);
+            nextBtn.addEventListener('click', () => {
+                playNext();
+                if (isPlaying) {
+                    audioPlayer.play().catch(e => console.error('Error playing next track:', e));
+                }
+            });
+            
+            prevBtn.addEventListener('click', () => {
+                playPrev();
+                if (isPlaying) {
+                    audioPlayer.play().catch(e => console.error('Error playing previous track:', e));
+                }
+            });
+            
+            progressContainer.addEventListener('click', setProgress);
+            
+            audioPlayer.addEventListener('timeupdate', updateProgress);
+            audioPlayer.addEventListener('ended', playNext);
+            
+            // Initialize individual song click handlers
+            songs.forEach((song, index) => {
+                song.addEventListener('click', function() {
+                    if (currentSongIndex === index && isPlaying) {
+                        // If clicking on currently playing song, pause it
+                        togglePlay();
+                    } else {
+                        // Otherwise play the clicked song
+                        isPlaying = true;
+                        playSong(index);
+                        updatePlayButtonState();
+                    }
+                });
+            });
+            
+            // Initialize play buttons separately for mobile-friendly interaction
+            playButtons.forEach((btn, index) => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent triggering the song click event
+                    
+                    if (currentSongIndex === index && isPlaying) {
+                        // If clicking on currently playing song, pause it
+                        togglePlay();
+                    } else {
+                        // Otherwise play the clicked song
+                        isPlaying = true;
+                        playSong(index);
+                        updatePlayButtonState();
+                    }
+                });
+            });
         });
     </script>
 </body>
